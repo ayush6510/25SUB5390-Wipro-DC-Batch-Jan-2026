@@ -1,0 +1,96 @@
+Computer Hardware 
+	-> Peripheral Devices
+		Option Devices that we can connect to computer for enhanced capacity/working. (Printer/Webcam/Touchpad/Scanner etc.)
+	-> Components of Computer
+		1. Cabinet
+		2. PSU (Power Supply Unit) / SMPS (Switched Mode Power Supply)
+		3. Motherboard
+			* CPU Socket
+			* Memory Slots / DIMM Slots (Dual Inline Memory Module)
+			* Storage Interfaces (IDE/SATA)
+			* Power Connectors (AT/ATx)
+			* Expansion Slots
+				- PCI (Peripheral Communication Interface) - Older Technology Motherboards
+				- PCI-e (Peripheral Communication Interface Express) - Newer Technology Motherboards
+			* BIOS Chip (Basic Input Output System)
+				- EEPROM (Electronically Erasable Programmable Read-Only Memory)
+				- BIOS Functions
+					* POST (Power on Self Test)
+					* Bootstrap Loader (Search Operating System in Disk)
+					* Setup Utility Program (Can make changes in routine settings) - Optional
+					* BIOS Drivers
+			* CMOS Battery (Complimentary Metal Oxide Semiconductor)
+			* I/O Ports (Input Output Ports)
+				- PS2 Ports (Keyboard/Mouse) - Older Motherboards
+				- USB Ports
+				- VGA Port
+				- HDMI Port
+				- Ethernet Port
+				- Audio Ports
+				
+			* AGP ( Accelerate Graphics Port)
+		4. RAM (Random Access Memory)
+			- Static RAM
+			- Dynamic RAM
+		5. Processor
+			- CU (Control Unit)
+			- ALU (Arithmetic Logical Unit)
+			- MU (Memory Unit)
+			- Types of Processor 
+				* PGA (Pin Grid Array)
+				* LGA ( Land Grid Array)
+			- Depending on Processor Family (Intel)
+				* i-series Processor - Client Machines
+				* Xenon series Processor - Servers
+		6. HDD (Hard Disk Drive) / SSD (Solid State Drive)
+			*  HDD (Hard Disk Drive)
+				- Older Technology
+				- Slow in speed in comparison of SSD 
+				- Having mechanical component based storage
+				- Consume more power
+				- 3.5 Inch (Desktops) / 2.5 Inch (Laptops)
+			* SSD (Solid State Drive)
+				- Newer Technology
+				- Fast in Speed
+				- Chip based storage method used
+				- Consume less power
+				- SATA SSD / NvMe SSD or M.2 SSD
+
+		7. Graphics Card (optional)
+		8. CD / DVD Drive (optional) - somehow deprecated (CD - 700-800 MB / DVD - 4.7-8 GB Write Once then Read-only)
+
+
+
+Software
+	-> Set of Instructions by which we can process our data and get desired output
+	-> Types of Software
+		* System Software - Software that can directly interact with computer hardware. (Example-Operating System)
+			- Operating System - Act like as a bridge between user and computer. And manage different tasks as required.
+				* Different OS Platforms
+					- Windows
+					- Linux
+					- Mac OS
+				* Types of the Operating System
+					- Client OS (Win XP, Win Vista, Win 7, Win 8, Win 10, Win 11 etc.) 
+					- Server OS (Win 2008, Win 2012,  Win 2012 R2, Win 2016, Win 2019, Win 2020, Win 2025 etc.)
+				* Types of Operating System as per usage
+					- GUI (Graphical User Interface) based
+					- CLI (Command Line Interface) based
+				* Tasks of Operating System 
+					- Memory Management (Resource Monitor) - resmon
+					- Disk Management (Disk Management Utility) - diskmgmt.msc
+					- Process Management (Task Manager) - taskmgr
+					- File Management (File Explorer) - explorer
+					- User Management (User Management Console) - lusrmgr.msc
+					- Device Management (Device Manger) - devmgmt.msc
+					- Network Management (Network Management Utility) - ncpa.cpl
+					- Event  Management (Event Management) - eventvwr
+					- Resource Management (Resource Monitor) - resmon
+					- Task Management (Task Schedular) - taskschd.msc
+					- Computer Management Portal - compmgmt.msc
+					- Service Management (Service Management Utility) - services.msc
+					- Performance Monitor - perfmon
+		* Application Software - Software those can run on top of system software for different different purpose.
+		* Utility Software - Software that can manage system and application software.
+
+		
