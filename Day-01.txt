@@ -1,3 +1,5 @@
+Day-01
+*******
 Computer Hardware 
 	-> Peripheral Devices
 		Option Devices that we can connect to computer for enhanced capacity/working. (Printer/Webcam/Touchpad/Scanner etc.)
@@ -19,6 +21,11 @@ Computer Hardware
 					* Bootstrap Loader (Search Operating System in Disk)
 					* Setup Utility Program (Can make changes in routine settings) - Optional
 					* BIOS Drivers
+				- Types of BIOS
+					* Legacy BIOS - Older Technology
+						~ Supports MBR Partition Scheme
+					* UEFI BIOS (Unified Extensible Firmware Interface) - New Technology
+						~ Supports GPT Partition Scheme
 			* CMOS Battery (Complimentary Metal Oxide Semiconductor)
 			* I/O Ports (Input Output Ports)
 				- PS2 Ports (Keyboard/Mouse) - Older Motherboards
@@ -93,4 +100,377 @@ Software
 		* Application Software - Software those can run on top of system software for different different purpose.
 		* Utility Software - Software that can manage system and application software.
 
+********************************************************************************************************************************************************************************************
+
+Day-02
+********
+Difference Between Domain and Workgroup
+
+Feature				Domain										Workgroup
+1. Management			Centralized (Managed by Server)							Decentralized (Each computer manages itself)
+2. User Login			User can login into any computer						Can only login locally (in a same machine)
+				Computer should connected in domain
+3. Security			High - Managing Policies by Server						Low - Local management of user
+3. User Accounts		Stored in Server								Stored Locally
+4. Scalability			Suitable for Large Networks							Suitable for Small Networks
+5. Example			Office / Enterprise Environment							Home and Small Office
+
+
+Storage Concepts
+	* Ways to connect to the Storage
+		- DAS (Direct Attached Storage)
+			Directly attached to the computer / server.
+		- NAS (Network Attached Storage)
+			File-based storage shared over a network
+		- SAN (Storage Area Network)
+			High-speed dedicated network for block level storage
+
+
+	*  Types of disk
+		- Basic Disk
+			* Traditional disk type that uses MBR/GPT partition scheme
+			* Used to install and run operating system
+			* Cannot combine multiple disks
+			* No Fault tolerance
+		- Dynamic Disk
+			* Advanced disk type that use volumes instead of partition
+				-Types of volume in Dynamic Disk (RAID = Redundant Array of Independent / Inexpensive Disk)
+					* Simple Volume (Looks like a normal partition but dynamic)
+					* Spanned Volume (Combine multiple disks)
+						~ Bigger Size 
+						~ No fault tolerance (If one disk fails -> all data lost)
+					* Stripped Volume (Split data across the disk) {RAID 0}
+						~ Faster data read write operations
+						~ No fault tolerance (If one disk fails -> all data lost)
+					* Mirrored Volume (Copy data and stored in both disks) {RAID 5}
+						~ Half storage capacity
+						~ Fault tolerance (If one disk fails -> data is safe)
+					* RAID 5 Volume
+						~ Requires minimum 3 disks
+						~ Better performance
+						~ Fault tolerance
+						~ Mostly used in servers
+
+			* It can combine multiple disk space together
+			* Cannot run operating system only used to store data
+			* It is Fault Tolerant depending on the setup.	
+
+
+	* Partition Scheme
+		-> Types of Partition Scheme
+			- MBR (Master Boot Record)
+				* Older version partition method
+				* Can only support 2TB disk
+				* Maximum 4 primary partition can be created 
+			- GPT (GUID Partition Table)
+				* Newer version partition method
+				* Large disk size support (~9.4 ZB)
+				* Can create upto 128 primary partition
+				* Backup partition table. 
+	* Partition Types
+		- Primary Partition
+			* For operating system installation purpose
+			* Bootable
+		- Extended Partition
+			* Container for logical partitions
+			* Applies to the MBR partition scheme only
+		- Logical Partition
+			* Created inside the extended partition
+			* Used for extra drives (to store the data)
+	* File System and it's types
+		-  FAT32 (File Allocation Table)
+			* Max file size is 4 GB
+			* No security
+			* No compression option 
+			* Older windows file system
+		- NTFS (New Technology File System)
+			* Windows default file system
+			* Larger file size support
+			* Security options are there
+			* Compression and Encryption is there
+			* Newer file system
+		- ReFS (Resilient File System)
+			* Use for enterprise workload (Datacenters / Servers)
+			* Large storage
+			* Auto repair
+			* Data Integrity
+		- EXT3 (Old) / EXT4 (New)
+			* Used in Linux machines
+			* Large file support
+			* Stable and Fast
+
+
+Computer Network - Group of two or more than two devices.
+	-> Types of Computer Network (Based on Geographical Area)
+		* PAN (Personal Area Network)
+			~ Range - 10 meters
+			~ Example - Bluetooth, Infrared
+		* LAN (Local Area Network)
+			~ Range - 100 meters
+			~ Example - Home Networks, Office and Buildings
+			~ Two categories (1. SOHO - Small Office Home Office LAN,  2. Enterprise LAN)
+		* CAN (Campus Area Network)
+			~ Range - 1-5 KMs
+			~ Example - Connecting multiple departments together
+		* MAN (Metropolitan Area Network)
+			~ Range - 10-100 KMs
+			~Example - Connecting across the cities, Metro Rail Network
+		* WAN (Wide Area Network)
+			~ Range - Across the globe
+			~ Example - Satellite, Internet   
+	-> Types of Computer Network (Based on Connectivity Method)
+		* Guided Medium (Wired Network)
+		* Unguided Medium (Wireless)
+	-> Types of Computer Network (Based on Network Design)
+		* Peer to Peer Network
+		* Client-Server Network
+	-> Types of Computer Network (Based on Network Topology)
+		* Point to Point
+		* RING
+		* BUS
+		* STAR
+		* TREE
+		* MESH
+		* HYBRID
+	-> Communication Modes
+		* Simplex - 
+		* Duplex - 
+			~ Half-Duplex
+			~ Full Duplex
+
+	-> Transmission Method
+		* Broadcast (One to all)
+		* Multicast (One to many)
+		* Unicast (One to one)
+		* Anycast (one to Nearest)
+
+Network Devices - 
+	* NIC (Network Interface Card) - Hardware that allows a device to connect
+		- Ethernet
+		- Wi-Fi
+	* Repeater - Boosts weak signals by amplifying them
+		- Used for the long distance connections
+		- Working - Signal -> Weak -> Repeater -> amplify -> send again
+
+	* HUB - Connects multiple systems but sends data to everyone
+		- Not Secure
+		- Collisions
+		- Slow
+		- Works on Half-Duplex mode
+	* Switch - Connects devices inside the LAN and forward data
+		- Smart Device
+		- Secure
+		- Faster than hub
+		- No collision
+		- Works on Full Duplex mode
+	* Router - Connects two different networks using IP Address
+		- Detect available paths
+		- Select best path
+		- Forward data Packet
+	* Gateway - Connects two different networks
+		- Entry / Exit points for the data 
+		- Conceptual thing 
+		- Acts as translator
+	* Firewall - Blocks or allow traffic based on the rules
+		- Types of the firewall
+			~ Software Firewall
+			~ Hardware Firewall
+			~ Cloud Firewall
+	* Access Point - Provide wireless network
+	* Modem - Convert digital signal <-> analog signal 
+
+
+
+Datacenter - A physical facility that stores
+	- Servers
+	- Storage systems
+	- Network Devices
+	- Power Systems
+	- Cooling Systems
+	- Security Systems
+	All these things works together to run
+	- Websites
+	- Applications
+	- Databases
+	- Emails
+	- Cloud Services
+	- Banking Systems
+	- Government Portals
+	Example - When you open YouTube where dos the video com from ?
+	Analogy to understand this
+
+	Real World										Datacenter
+	Warehouse										Server Room
+	Machines										Servers
+	Workers											Engineers / Admins
+	Electricity										Industry grade UPS / Generators
+	AC											Cooling system
+	Security Guards										Firewalls / CCTV
+
+	- Core Components of Datacenter
+		Compute Layer - Processing Power
+			* Server 
+				~ A powerful computer that run 24x7
+				~ Handle multiple users
+				~ High CPU / RAM Power
+				~ Redundant Power
+					- Types of servers
+						* Tower Server - Looks like as Desktop and useful for Small offices
+						* Rack Server - Mounted inside the rack and mostly used in datacenters
+						* Blade Server - Very compact and high density servers used in datacenters
+		Storage Layer - Server needs space to store like Files, OS, Database, Logs and Backup etc.
+			* Ways to connect to the Storage
+		- DAS (Direct Attached Storage)
+			Directly attached to the computer / server.
+		- NAS (Network Attached Storage)
+			File-based storage shared over a network
+		- SAN (Storage Area Network)
+			High-speed dedicated network for block level storage
+
+
+	*  Types of disk
+		- Basic Disk
+			* Traditional disk type that uses MBR/GPT partition scheme
+			* Used to install and run operating system
+			* Cannot combine multiple disks
+			* No Fault tolerance
+		- Dynamic Disk
+			* Advanced disk type that use volumes instead of partition
+				-Types of volume in Dynamic Disk (RAID = Redundant Array of Independent / Inexpensive Disk)
+					* Simple Volume (Looks like a normal partition but dynamic)
+					* Spanned Volume (Combine multiple disks)
+						~ Bigger Size 
+						~ No fault tolerance (If one disk fails -> all data lost)
+					* Stripped Volume (Split data across the disk) {RAID 0}
+						~ Faster data read write operations
+						~ No fault tolerance (If one disk fails -> all data lost)
+					* Mirrored Volume (Copy data and stored in both disks) {RAID 5}
+						~ Half storage capacity
+						~ Fault tolerance (If one disk fails -> data is safe)
+					* RAID 5 Volume
+						~ Requires minimum 3 disks
+						~ Better performance
+						~ Fault tolerance
+						~ Mostly used in servers
+
+			* It can combine multiple disk space together
+			* Cannot run operating system only used to store data
+			* It is Fault Tolerant depending on the setup.	
+
+
+	* Partition Scheme
+		-> Types of Partition Scheme
+			- MBR (Master Boot Record)
+				* Older version partition method
+				* Can only support 2TB disk
+				* Maximum 4 primary partition can be created 
+			- GPT (GUID Partition Table)
+				* Newer version partition method
+				* Large disk size support (~9.4 ZB)
+				* Can create upto 128 primary partition
+				* Backup partition table. 
+	* Partition Types
+		- Primary Partition
+			* For operating system installation purpose
+			* Bootable
+		- Extended Partition
+			* Container for logical partitions
+			* Applies to the MBR partition scheme only
+		- Logical Partition
+			* Created inside the extended partition
+			* Used for extra drives (to store the data)
+	* File System and it's types
+		-  FAT32 (File Allocation Table)
+			* Max file size is 4 GB
+			* No security
+			* No compression option 
+			* Older windows file system
+		- NTFS (New Technology File System)
+			* Windows default file system
+			* Larger file size support
+			* Security options are there
+			* Compression and Encryption is there
+			* Newer file system
+		- ReFS (Resilient File System)
+			* Use for enterprise workload (Datacenters / Servers)
+			* Large storage
+			* Auto repair
+			* Data Integrity
+		- EXT3 (Old) / EXT4 (New)
+			* Used in Linux machines
+			* Large file support
+			* Stable and Fast
+	
+
+	Network Layer - This is a heart of the datacenter, used to connect to the public internet as well as establish internal connection between devices.
+		Network Devices - 
+	* NIC (Network Interface Card) - Hardware that allows a device to connect
+		- Ethernet
+		- Wi-Fi
+	* Repeater - Boosts weak signals by amplifying them
+		- Used for the long distance connections
+		- Working - Signal -> Weak -> Repeater -> amplify -> send again
+
+	* HUB - Connects multiple systems but sends data to everyone
+		- Not Secure
+		- Collisions
+		- Slow
+		- Works on Half-Duplex mode
+	* Switch - Connects devices inside the LAN and forward data
+		- Smart Device
+		- Secure
+		- Faster than hub
+		- No collision
+		- Works on Full Duplex mode
+	* Router - Connects two different networks using IP Address
+		- Detect available paths
+		- Select best path
+		- Forward data Packet
+	* Gateway - Connects two different networks
+		- Entry / Exit points for the data 
+		- Conceptual thing 
+		- Acts as translator
+	* Firewall - Blocks or allow traffic based on the rules
+		- Types of the firewall
+			~ Software Firewall
+			~ Hardware Firewall
+			~ Cloud Firewall
+	* Access Point - Provide wireless network
+	* Modem - Convert digital signal <-> analog signal 
+
 		
+Power Management Layer - Power is critical
+	- Power Management Devices
+		* UPS - Instant Backup
+		* Generator - Long Backup
+		* Redundancy - Dual power supplies
+Cooling System Layer - Server and Networking devices generates a lot of heat
+		     - if more heat -> failure
+	- Cooling methods
+		* Precision ACs
+		* Hot aisle / cold aisle
+		* Liquid Cooling
+Physical Security
+	* Biometric Access
+	* CCTV 
+	* Fire suppression
+	* Access Cards
+	* Security Guards
+	Example - only admins can enter into the server room
+
+
+Types of Datacenter
+	* Enterprise Datacenter
+		- Company owned datacenter
+		- Example -> TCS, Infosys, Wipro, HCL, etc
+	* Colocation
+		- Rented space in datacenter
+		- Example -> Rack space rental
+	* Cloud Datacenter
+		- Owned by Cloud Service Provider
+		- Example - Azure, AWS, GCP etc.
+Virtualization - Method how to run virtual machines in a physical computer / server
+		- We do virtualization using software called Hypervisor
+		- Types of Hypervisor Tools
+			* Type 1 Hypervisor - Directly runs on a physical hardware (Example - VMWare ESXi, Hyper V Bare Metal etc.)
+			* Type 2 Hypervisor - Need a OS to run (Example - VM Ware Workstation, Virtual Box, Hyper-V etc)
