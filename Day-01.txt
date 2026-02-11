@@ -1,4 +1,4 @@
-Day-01
+
 *******
 Computer Hardware 
 	-> Peripheral Devices
@@ -474,3 +474,59 @@ Virtualization - Method how to run virtual machines in a physical computer / ser
 		- Types of Hypervisor Tools
 			* Type 1 Hypervisor - Directly runs on a physical hardware (Example - VMWare ESXi, Hyper V Bare Metal etc.)
 			* Type 2 Hypervisor - Need a OS to run (Example - VM Ware Workstation, Virtual Box, Hyper-V etc)
+
+
+********************************************************************************************************************************************************************************************
+
+Day-03
+********
+Windows Server - It is a operating system designed for servers to manage these workloads
+	Example- 
+		* Host application
+		* Manage Users
+		* Provide Network Services
+		* Secure IT Infrastructure 
+		* Run enterprise workloads
+
+	Evolution of Windows Server (Short Summary)
+		* 2008				Active Directory Improvements
+		* 2012				Hyper-V, Storage Spaces
+		* 2016				Containers, Nano Server
+		* 2019				Hybrid Cloud + Security + HCI
+		* 2022				Advanced Security
+
+	Windows Server 2019
+		- Key Features of Windows Server 2019
+			* Hybrid Cloud Integration (Added Features like Azure Backup / Site Recovery / File Sync / Monitor)
+			* Security Improvements
+				~ Windows Defender ATP (Advanced Threat Protection) - Detect Malware, Ransomware Attacks
+				~ Shielded VMs - Protect Hyper-V VMs from admin or Hackers
+				~ Credential Guard - Password Theft
+			* Hyper Converged Infrastructure - Old Model (Server + Storage + Network) / New Model (Everything in one Box)
+			* Container Support - Containers are light weight VMs
+				~ Windows Container
+				~ Hyper-V Container
+			* Storage Service Improvements
+				~ Storage Migration Services
+				~ Data Deduplication
+				~ ReFS Improvements
+	Editions of Server 2019
+		Edition								Use Case
+		Essentials							Small business (<25 Users)
+		Standard							Basic Virtualization needs or for Mid business
+		Datacenter							Heavy Virtualization + HCI or for Large business
+	Licensing of Windows Serer 2019
+		Standard - 2 VMs
+		Datacenter - Unlimited VMs
+	Installation Options for Windows Server 2019
+		Type						GUI						Lightweight						Used in
+		Desktop Experience				Yes						No							Testing / Production
+		Server Core					No						Yes							Production
+	Minimum Installation Requirements for Window Server 2019
+		Minimum
+		* CPU: 1.4GHz 64-Bit
+		* RAM: 2GB (Server Core) 4GB (Server with GUI)
+		* Disk: 32GB
+		Recommended
+		* 8GB+ RAM
+		* 100GB+ Disk
