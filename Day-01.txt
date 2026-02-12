@@ -530,3 +530,88 @@ Windows Server - It is a operating system designed for servers to manage these w
 		Recommended
 		* 8GB+ RAM
 		* 100GB+ Disk
+********************************************************************************************************************************************************************************************
+
+Day-04
+********
+ITIL (Information technology Infrastructure Library) - ITIL is a best practice framework for
+	* ITSM (IT Service Management)
+	* Delivering IT Services efficiently
+	* Reducing downtime
+	* Improving customer satisfaction
+ 			
+	- Core Concepts of ITIL
+		* Service - A service delivers value without customer worrying about how it's done.
+			~ Gmail, Netflix, Azure Cloud etc.
+		* Customer vs User vs Sponsor
+			Term						Meaning
+			Customer					Pays for Service
+			User						Uses service
+			Sponsor						Approves the Budget
+			Example - Office Email (Sponsor -> CEO, Customer -> HR, User -> Employee)
+	
+
+		* Utility vs Warranty
+			Utility - What service does
+			Warranty - How well it performs
+			Example - 
+			Utility - Internet available
+			Warranty - 99.9 % uptime (SLA - Service Level Agreement)
+	- ITIL Lifecycle Management
+		* Service Strategy - Plan what services to offer 
+		* Service Design - Design that decide how service will work
+			~ Architecture - > How the tools are designed to create a proper business value
+			~ SLA - It is a Service level agreement between user and the service provider 
+			~ Capacity - The SKU (Stock Keeping Unit) required as per the requirement of the user
+			~ Security - It is all about the authentication and authorization
+			~ Backup - It is a method of creating a copy of the data to keep it safe from data lost at a point of any failure
+		* Service Transition - Move service from Dev -> Production
+			~ Testing
+			~ Deployment
+			~ Change Control
+			~ Release Management
+		* Service Operation - Daily operations happens here
+			~ Incident
+			~ Problem
+			~ Change
+			~ Request
+			~ Event
+		* Continual Improvement - Improve constantly
+	- ITIL Processes
+		* Incident Management 
+			~ Restore Service ASAP
+			~ Not fix Root Cause
+			~ Example - Server crashed (Restart -> Working) Incident Resolved
+		* Problem Management
+			~ Find root cause permanently 
+			~ Example - Server crashes daily (Root Cause -> Faulty RAM) / Action -> Replace RAM
+		* Change Management
+			~ Control changes safely
+			~ Change Types
+				* Standard
+				* Normal
+				* Emergency 
+			~ Example - Upgrade on Windows Server (Approval is required)
+		* Service Request Management - Handle the small requests
+			~ Password Reset
+			~ Software Installation
+			~ Access etc.
+		* SLA Management - Service Level Agreement Management
+ 		* Event Management - Monitoring Alerts
+	- End to End Real time Example - (Banking Application Down)
+		1. Alert Triggered (Event)
+		2. Ticket Created (Incident)
+		3. Restart Server 
+		4. Root cause found (Problem)
+		5. Patch Update (Change)
+		6. SLA report Created
+		7. Improve Monitoring
+
+	- Roles in ITIL
+		* Service Owner (Responsible for end to end operations)
+		* Incident Manager (Responsible to restore service as soon as possible)
+		* Change Manager (Ensure changes happen safely)
+		* Service Desk (First point of contact for users)
+		* Problem Manager (Find root cause permanently and focuses on long term fix)
+			- Example
+				Company = Bank / Service = Internet Banking Portal / Problem = At 10 AM Customers cannot login
